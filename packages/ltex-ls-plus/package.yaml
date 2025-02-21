@@ -19,7 +19,7 @@ source:
     # The platform-specific releases bundle a java runtime engine, and are
     # therefore preferable to avoid external dependencies (see #2837).
     - target: linux_arm64_gnu
-      file: ltex-ls-plus-{{version}}-linux_aarch64.tar.gz
+      file: ltex-ls-plus-{{version}}-linux-aarch64.tar.gz
       bin:
         lsp: ltex-ls-plus-{{version}}/bin/ltex-ls-plus
         cli: ltex-ls-plus-{{version}}/bin/ltex-cli-plus
