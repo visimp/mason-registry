@@ -1,5 +1,5 @@
 ---
-name: ltex-ls-plus
+name: ltex_plus
 description: |
   LTeX Language Server+: LSP language server for LanguageTool 🔍✔️ with support for LaTeX 🎓, Markdown 📝, and others.
 homepage: https://ltex-plus.github.io/ltex-plus/
