@@ -1,5 +1,5 @@
 ---
-name: prolog-language-server
+name: prolog_ls
 description: A Prolog LSP Server
 homepage: https://www.swi-prolog.org/pack/list?p=lsp_server
 licenses:
