@@ -1,0 +1,25 @@
+---
+name: idris2_lsp
+description: Language Server for Idris2
+homepage: https://github.com/idris-community/idris2-lsp?tab=readme-ov-file
+licenses:
+  - BSD-3-Clause
+languages:
+  - Idris2
+categories:
+  - LSP
+
+source:
+  # The version is a Idris2 pack collection. Renovate does not support pack as a
+  # datasource.
+  # https://github.com/stefan-hoeck/idris2-pack-db/tree/main/collections
+  id: pkg:github/idris-community/idris2-lsp@nightly-250222
+  build:
+    - target: unix
+      run: |
+        PACK_DIR="$PWD" pack -p "$VERSION" install-app idris2-lsp
+      staged: false
+      bin:
+        idris2-lsp: idris2-lsp
+bin:
+  idris2-lsp: idris2-lsp
