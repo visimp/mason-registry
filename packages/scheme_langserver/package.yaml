@@ -1,0 +1,19 @@
+---
+name: scheme_langserver
+description: "`scheme-langserver`, a language server protocol implementation for scheme."
+homepage: https://github.com/thqby/vscode-autohotkey2-lsp
+licenses:
+  - MIT
+languages:
+  - Scheme
+categories:
+  - LSP
+
+source:
+  id: pkg:github/ufo5260987423/scheme-langserver@1.2.9
+  asset:
+  - target: linux_x64_gnu
+    file: run
+    bin: run
+bin:
+  scheme-langserver: "{{source.asset.bin}}"
