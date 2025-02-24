@@ -1,0 +1,34 @@
+---
+name: idris2_lsp
+description: Language Server for Idris2
+homepage: https://github.com/idris-community/idris2-lsp?tab=readme-ov-file
+licenses:
+  - BSD-3-Clause
+languages:
+  - Idris2
+categories:
+  - LSP
+
+source:
+  # The version is a Idris2 pack collection. Beware:
+  # 1. renovate does not support Idris2 pack collections, so it should be
+  #    bumped manually
+  # 2. similarly, the version is not bound to a $VERSION variable, so it also
+  #    needs to be bumped in the bash script
+  # More info at:
+  # https://github.com/stefan-hoeck/idris2-pack-db/tree/main/collections
+  #
+  # Idris2-lsp assumes to be installed in the same folder as pack, which is not
+  # the case. So, we do not use the full path and pray pack is on PATH.
+  id: pkg:generic/stefan-hoeck/idris2-pack-db@nightly-250223
+  build:
+    - target: unix
+      run: |
+        PACK_DIR="$PWD" pack -p nightly-250223 install-app idris2-lsp
+        sed -ie "s/${PWD//\//\\/}\/bin\///g" bin/idris2-lsp
+      staged: false
+      bin:
+        idris2-lsp: idris2-lsp
+
+bin:
+  idris2-lsp: bin/idris2-lsp
