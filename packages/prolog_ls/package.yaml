@@ -11,7 +11,7 @@ categories:
 
 source:
   # renovate:datasource=github-tags
-  id: pkg:github/jamesnvc/lsp_server@v3.9.2
+  id: pkg:github/jamesnvc/lsp_server@v3.10.0
   build:
     - target: unix
       bin:
