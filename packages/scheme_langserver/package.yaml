@@ -10,7 +10,7 @@ categories:
   - LSP
 
 source:
-  id: pkg:github/ufo5260987423/scheme-langserver@1.2.9
+  id: pkg:github/ufo5260987423/scheme-langserver@2.0.0
   asset:
   - target: linux_x64_gnu
     file: run
