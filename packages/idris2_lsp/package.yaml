@@ -20,11 +20,11 @@ source:
   #
   # Idris2-lsp assumes to be installed in the same folder as pack, which is not
   # the case. So, we do not use the full path and pray pack is on PATH.
-  id: pkg:generic/stefan-hoeck/idris2-pack-db@nightly-250223
+  id: pkg:generic/stefan-hoeck/idris2-pack-db@nightly-250929
   build:
     - target: unix
       run: |
-        PACK_DIR="$PWD" pack -p nightly-250223 install-app idris2-lsp
+        PACK_DIR="$PWD" pack -p nightly-250929 install-app idris2-lsp
         sed -ie "s/${PWD//\//\\/}\/bin\///g" bin/idris2-lsp
       staged: false
       bin:
