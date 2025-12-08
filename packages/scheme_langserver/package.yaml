@@ -13,7 +13,7 @@ source:
   id: pkg:github/ufo5260987423/scheme-langserver@2.0.3
   asset:
   - target: linux_x64_gnu
-    file: run
-    bin: run
+    file: scheme-langserver-x86_64-linux-glibc
+    bin: scheme-langserver-x86_64-linux-glibc
 bin:
   scheme-langserver: "{{source.asset.bin}}"
