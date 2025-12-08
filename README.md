@@ -15,10 +15,14 @@ This registry is active by default on all `visimp` installations, but other
 Neovim users can enable it in their [`mason.nvim`
 configuration](https://github.com/williamboman/mason.nvim?tab=readme-ov-file#default-configuration)
 (which `visimp` users can access from their [`lsp` layer
-configuration](https://visimp.teapot.ovh/docs/layers/lsp/#configuration)):
+configuration](https://visimp.teapot.ovh/docs/layers/lsp/#configuration)).
+
+For example, here is how a user with no Neovim plugin manager would enable the
+registry (the argument of the `setup` function is [Mason's
+`MasonSettings`](https://github.com/williamboman/mason.nvim?tab=readme-ov-file#default-configuration)):
 
 ```lua
-require("mason").setup { ---@class MasonSettings
+require("mason").setup {
     registries = {
         "github:visimp/mason-registry",
         "github:mason-org/mason-registry"
