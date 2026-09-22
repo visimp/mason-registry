@@ -10,7 +10,6 @@ categories:
   - LSP
 
 source:
-  # renovate:datasource=hackage
   id: pkg:hackage/agda-language-server@7
   build:
     - target: unix

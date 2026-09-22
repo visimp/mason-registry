@@ -7,7 +7,7 @@
     {
       customType: 'regex',
       managerFilePatterns: [
-        '/packages\\.yaml$/',
+        '^packages/.*/package\\.json$',
       ],
       matchStrings: [
         '\nname: (?<depName>.+)',
