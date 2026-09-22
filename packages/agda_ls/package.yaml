@@ -11,7 +11,7 @@ categories:
 
 source:
   # renovate:datasource=hackage
-  id: pkg:generic/agda/agda-language-server@7
+  id: pkg:hackage/agda-language-server@7
   build:
     - target: unix
       run: |
