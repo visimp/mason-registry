@@ -9,7 +9,7 @@ categories:
   - LSP
 source:
   # renovate:datasource=github-releases
-  id: pkg:github/agda/agda-language-server@7
+  id: pkg:generic/agda/agda-language-server@7
   build:
     - target: unix
       run: |
