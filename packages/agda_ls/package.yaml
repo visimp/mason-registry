@@ -10,7 +10,7 @@ categories:
   - LSP
 
 source:
-  id: pkg:hackage/agda-language-server@7
+  id: pkg:hackage/agda-language-server@8
   build:
     - target: unix
       run: |
