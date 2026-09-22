@@ -1,6 +1,5 @@
----
 name: agda_ls
-description:  Language Server for Agda
+description: Language Server for Agda
 homepage: https://hackage.haskell.org/package/agda-language-server
 licenses:
   - MIT
@@ -8,9 +7,8 @@ languages:
   - Agda
 categories:
   - LSP
-
 source:
-  id: pkg:hackage/agda-language-server@8
+  id: pkg:github/agda/agda-language-server@7
   build:
     - target: unix
       run: |
@@ -20,9 +18,7 @@ source:
         VERSION: "{{version}}"
       bin:
         als: als
-
 schemas:
   lsp: "vscode:https://hackage.haskell.org/package/agda-language-server-{{version}}/src/package.yaml"
-
 bin:
   als: "{{source.build.bin.als}}"
