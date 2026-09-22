@@ -1,14 +1,19 @@
 {
-  "$schema": "https://renovatebot.com",
-  "extends": ["github>mason-org/registry-renovate-config"],
-  "regexManagers": [
+  $schema: 'https://renovatebot.com',
+  extends: [
+    'github>mason-org/registry-renovate-config',
+  ],
+  customManagers: [
     {
-      "fileMatch": ["packages\\.yaml$"],
-      "matchStrings": [
-        "\nname: (?<depName>.+)",
-        "\n  id:\\s+pkg:hackage\\/(?<packageName>.+)@(?<currentValue>[^\\s\\?#]+)"
+      customType: 'regex',
+      managerFilePatterns: [
+        '/packages\\.yaml$/',
       ],
-      "datasourceTemplate": "hackage"
-    }
-  ]
+      matchStrings: [
+        '\nname: (?<depName>.+)',
+        '\n  id:\\s+pkg:hackage\\/(?<packageName>.+)@(?<currentValue>[^\\s\\?#]+)',
+      ],
+      datasourceTemplate: 'hackage',
+    },
+  ],
 }
