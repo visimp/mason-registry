@@ -13,6 +13,7 @@ source:
   build:
     - target: unix
       run: |
+        stack update
         stack install agda-language-server-"$VERSION" --local-bin-path="$PWD"
       staged: false
       env:
